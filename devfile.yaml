@@ -13,12 +13,6 @@ components:
   - name: venv
     volume:
       size: 1G
-    actions:
-      - type: exec
-        component: python
-        command: |
-          python -m pip install pipenv
-        workdir: '${PROJECTS_ROOT}/python-hello-world'
 commands:
   - id: run
     exec:
