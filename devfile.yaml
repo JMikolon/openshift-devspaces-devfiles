@@ -13,12 +13,12 @@ components:
   - name: venv
     volume:
       size: 1G
-- name: Install packages
-  actions:
-    - type: exec
-      component: python
-      command: |
-        pip install black
+  - name: Install packages
+    actions:
+      - type: exec
+        component: python
+        command: |
+          pip install black
 commands:
   - id: run
     exec:
