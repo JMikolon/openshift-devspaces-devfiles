@@ -13,7 +13,6 @@ components:
   - name: venv
     volume:
       size: 1G
-  - name: Install packages
     actions:
       - type: exec
         component: python
