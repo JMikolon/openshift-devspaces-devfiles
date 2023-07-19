@@ -1,4 +1,4 @@
-schemaVersion: 2.1.0
+schemaVersion: 1.0.0
 metadata:
   name: python-hello-world
 components:
@@ -13,8 +13,11 @@ components:
   - name: venv
     volume:
       size: 1G
-    commands:
-      commandLine: python -m pip install black
+    actions:
+    - type: exec
+      component: python
+      command: "pip install black"
+      workdir: ${PROJECTS_ROOT}/python-hello-world
 commands:
   - id: run
     exec:
