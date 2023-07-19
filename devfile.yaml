@@ -13,11 +13,6 @@ components:
   - name: venv
     volume:
       size: 1G
-    actions:
-    - type: exec
-      component: python
-      command: "pip install black"
-      workdir: ${PROJECTS_ROOT}/python-hello-world
 commands:
   - id: run
     exec:
@@ -27,3 +22,8 @@ commands:
       commandLine: python -m venv .venv && . .venv/bin/activate && python hello-world.py
       group:
         kind: run
+    actions:
+    - type: exec
+      component: python
+      command: "pip install black"
+      workdir: ${PROJECTS_ROOT}/python-hello-world
