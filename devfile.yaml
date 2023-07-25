@@ -28,7 +28,7 @@ commands:
       component: python
       workingDir: ${PROJECTS_ROOT}/quantum-projects
       commandLine: |
-        python -m venv .venv && . .venv/bin/activate && 
+        python -m venv ../.venv && . ../.venv/bin/activate &&
         python -m pip install pipenv==2023.7.9 && 
         python -m pip install ipykernel==6.24.0 &&
         python -m pip install black==23.7.0 &&
