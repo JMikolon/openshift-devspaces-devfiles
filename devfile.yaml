@@ -32,18 +32,6 @@ commands:
         python -m pip install pipenv==2023.7.9 && 
         python -m pip install ipykernel==6.24.0 &&
         python -m pip install black==23.7.0 &&
-        python -m pip install pylint==2.17.4  &&
-        python -m pip install qiskit==0.43.2 &&
-        python -m pip install dwave-ocean-sdk==6.4.1 &&
-        python -m pip install mlflow==2.4.2 &&
-        python -m pip install PennyLane==0.31.0 &&
-        python -m pip install torch==2.0.1 &&
-        python -m pip install tensorflow==2.13.0 &&
-        python -m pip install pytorch-lightning==2.0.5 &&
-        python -m pip install pandas==2.0.3  &&
-        python -m pip install dvc==3.6.0  &&
-        python -m pip install dvc-s3==2.23.0 &&
-        python -m pip install AutoGPTQ==0.2.2 &&
         python -m pip freeze > requirements.txt
       group:
         kind: build
